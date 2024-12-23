@@ -1,0 +1,14 @@
+﻿  CommonShaderReflection.cpp
+  Direct3D12.cpp
+  Direct3D12Hooks.cpp
+  Direct3D12Raytracing.cpp
+  Direct3D12ShaderReflection.cpp
+  GraphicsConfig.cpp
+  ParticleSystem.cpp
+  VisibilityBuffer.cpp
+  ResourceLoader.cpp
+  ReloadClient.cpp
+  Network.c
+WinPixEventRuntime.lib(WinPixEventRuntime.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in dxcompiler.lib(dxcompiler.dll); second definition ignored
+amd_ags_x64.lib(amd_ags_x64.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in dxcompiler.lib(dxcompiler.dll); second definition ignored
+  Renderer.vcxproj -> C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\PC Visual Studio 2019\x64\Debug\Renderer.lib

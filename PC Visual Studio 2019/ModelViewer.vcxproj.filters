@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <FSLShader Include="..\src\ModelViewer\Shaders\FSL\basic.frag.fsl">
+      <Filter>src\Shaders</Filter>
+    </FSLShader>
+    <FSLShader Include="..\src\ModelViewer\Shaders\FSL\basic.vert.fsl">
+      <Filter>src\Shaders</Filter>
+    </FSLShader>
+    <FSLShader Include="..\src\ModelViewer\Shaders\FSL\resources.h.fsl">
+      <Filter>src\Shaders</Filter>
+    </FSLShader>
+    <FSLShader Include="..\src\ModelViewer\Shaders\FSL\ShaderList.fsl">
+      <Filter>src\Shaders</Filter>
+    </FSLShader>
+    <FSLShader Include="..\src\ModelViewer\Shaders\FSL\skybox.frag.fsl">
+      <Filter>src\Shaders</Filter>
+    </FSLShader>
+    <FSLShader Include="..\src\ModelViewer\Shaders\FSL\skybox.vert.fsl">
+      <Filter>src\Shaders</Filter>
+    </FSLShader>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\Art\Scripts\TestBorderless.lua">
+      <Filter>Scripts</Filter>
+    </None>
+    <None Include="..\..\..\Art\Scripts\TestCenteredWindow.lua">
+      <Filter>Scripts</Filter>
+    </None>
+    <None Include="..\..\..\Art\Scripts\TestFullScreen.lua">
+      <Filter>Scripts</Filter>
+    </None>
+    <None Include="..\..\..\Art\Scripts\TestNonCenteredWindow.lua">
+      <Filter>Scripts</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{52011388-54af-4b46-8451-5bae50627c15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Shaders">
+      <UniqueIdentifier>{32323575-6230-43e3-85f4-c9411745f8c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts">
+      <UniqueIdentifier>{89e16dbd-164d-4398-8eb7-1d45a0b08cc5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\ModelViewer\ModelViewerMain.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
