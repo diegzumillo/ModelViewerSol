@@ -1,1 +1,3 @@
-﻿LINK : fatal error LNK1181: cannot open input file 'SpirvTools.lib'
+﻿dxcompiler.lib(dxcompiler.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in amd_ags_x64.lib(amd_ags_x64.dll); second definition ignored
+WinPixEventRuntime.lib(WinPixEventRuntime.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in amd_ags_x64.lib(amd_ags_x64.dll); second definition ignored
+  Renderer.vcxproj -> C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\PC Visual Studio 2019\x64\Release\Renderer.lib

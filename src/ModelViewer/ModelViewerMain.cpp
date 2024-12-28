@@ -58,10 +58,7 @@ struct PlanetInfoStruct
     mat4  mSharedMat; // Matrix to pass down to children
     vec4  mColor;
     uint  mParentIndex;
-    float mYOrbitSpeed; // Rotation speed around parent
-    float mZOrbitSpeed;
-    float mRotationSpeed; // Rotation speed around self
-    float mMorphingSpeed; // Speed of morphing betwee cube and sphere
+    
 };
 
 struct UniformBlock
@@ -69,7 +66,6 @@ struct UniformBlock
     CameraMatrix mProjectView;
     mat4         mToWorldMat[MAX_PLANETS];
     vec4         mColor[MAX_PLANETS];
-    float        mGeometryWeight[MAX_PLANETS][4];
 
     // Point Light Information
     vec4 mLightPosition;
@@ -83,11 +79,8 @@ struct UniformBlockSky
 
 // But we only need Two sets of resources (one in flight and one being used on CPU)
 const uint32_t gDataBufferCount = 2;
-const uint     gNumPlanets = 11;     // Sun, Mercury -> Neptune, Pluto, Moon
-const uint     gTimeOffset = 600000; // For visually better starting locations
-const float    gRotSelfScale = 0.0004f;
-const float    gRotOrbitYScale = 0.001f;
-const float    gRotOrbitZScale = 0.00001f;
+const uint     gNumPlanets = 1;     // Sun, Mercury -> Neptune, Pluto, Moon
+
 
 Renderer* pRenderer = NULL;
 
@@ -552,114 +545,11 @@ public:
 
         // Setup planets (Rotation speeds are relative to Earth's, some values randomly given)
         // Sun
-        gPlanetInfoData[0].mParentIndex = 0;
-        gPlanetInfoData[0].mYOrbitSpeed = 0; // Earth years for one orbit
-        gPlanetInfoData[0].mZOrbitSpeed = 0;
-        gPlanetInfoData[0].mRotationSpeed = 24.0f; // Earth days for one rotation
+        gPlanetInfoData[0].mParentIndex = 0;        
         gPlanetInfoData[0].mTranslationMat = mat4::identity();
         gPlanetInfoData[0].mScaleMat = mat4::scale(vec3(10.0f));
         gPlanetInfoData[0].mColor = vec4(0.97f, 0.38f, 0.09f, 0.0f);
-        gPlanetInfoData[0].mMorphingSpeed = 0.2f;
-
-        // Mercury
-        gPlanetInfoData[1].mParentIndex = 0;
-        gPlanetInfoData[1].mYOrbitSpeed = 0.5f;
-        gPlanetInfoData[1].mZOrbitSpeed = 0.0f;
-        gPlanetInfoData[1].mRotationSpeed = 58.7f;
-        gPlanetInfoData[1].mTranslationMat = mat4::translation(vec3(10.0f, 0, 0));
-        gPlanetInfoData[1].mScaleMat = mat4::scale(vec3(1.0f));
-        gPlanetInfoData[1].mColor = vec4(0.45f, 0.07f, 0.006f, 1.0f);
-        gPlanetInfoData[1].mMorphingSpeed = 5;
-
-        // Venus
-        gPlanetInfoData[2].mParentIndex = 0;
-        gPlanetInfoData[2].mYOrbitSpeed = 0.8f;
-        gPlanetInfoData[2].mZOrbitSpeed = 0.0f;
-        gPlanetInfoData[2].mRotationSpeed = 243.0f;
-        gPlanetInfoData[2].mTranslationMat = mat4::translation(vec3(20.0f, 0, 5));
-        gPlanetInfoData[2].mScaleMat = mat4::scale(vec3(2));
-        gPlanetInfoData[2].mColor = vec4(0.6f, 0.32f, 0.006f, 1.0f);
-        gPlanetInfoData[2].mMorphingSpeed = 1;
-
-        // Earth
-        gPlanetInfoData[3].mParentIndex = 0;
-        gPlanetInfoData[3].mYOrbitSpeed = 1.0f;
-        gPlanetInfoData[3].mZOrbitSpeed = 0.0f;
-        gPlanetInfoData[3].mRotationSpeed = 1.0f;
-        gPlanetInfoData[3].mTranslationMat = mat4::translation(vec3(30.0f, 0, 0));
-        gPlanetInfoData[3].mScaleMat = mat4::scale(vec3(4));
-        gPlanetInfoData[3].mColor = vec4(0.07f, 0.028f, 0.61f, 1.0f);
-        gPlanetInfoData[3].mMorphingSpeed = 1;
-
-        // Mars
-        gPlanetInfoData[4].mParentIndex = 0;
-        gPlanetInfoData[4].mYOrbitSpeed = 2.0f;
-        gPlanetInfoData[4].mZOrbitSpeed = 0.0f;
-        gPlanetInfoData[4].mRotationSpeed = 1.1f;
-        gPlanetInfoData[4].mTranslationMat = mat4::translation(vec3(40.0f, 0, 0));
-        gPlanetInfoData[4].mScaleMat = mat4::scale(vec3(3));
-        gPlanetInfoData[4].mColor = vec4(0.79f, 0.07f, 0.006f, 1.0f);
-        gPlanetInfoData[4].mMorphingSpeed = 1;
-
-        // Jupiter
-        gPlanetInfoData[5].mParentIndex = 0;
-        gPlanetInfoData[5].mYOrbitSpeed = 11.0f;
-        gPlanetInfoData[5].mZOrbitSpeed = 0.0f;
-        gPlanetInfoData[5].mRotationSpeed = 0.4f;
-        gPlanetInfoData[5].mTranslationMat = mat4::translation(vec3(50.0f, 0, 0));
-        gPlanetInfoData[5].mScaleMat = mat4::scale(vec3(8));
-        gPlanetInfoData[5].mColor = vec4(0.32f, 0.13f, 0.13f, 1);
-        gPlanetInfoData[5].mMorphingSpeed = 6;
-
-        // Saturn
-        gPlanetInfoData[6].mParentIndex = 0;
-        gPlanetInfoData[6].mYOrbitSpeed = 29.4f;
-        gPlanetInfoData[6].mZOrbitSpeed = 0.0f;
-        gPlanetInfoData[6].mRotationSpeed = 0.5f;
-        gPlanetInfoData[6].mTranslationMat = mat4::translation(vec3(60.0f, 0, 0));
-        gPlanetInfoData[6].mScaleMat = mat4::scale(vec3(6));
-        gPlanetInfoData[6].mColor = vec4(0.45f, 0.45f, 0.21f, 1.0f);
-        gPlanetInfoData[6].mMorphingSpeed = 1;
-
-        // Uranus
-        gPlanetInfoData[7].mParentIndex = 0;
-        gPlanetInfoData[7].mYOrbitSpeed = 84.07f;
-        gPlanetInfoData[7].mZOrbitSpeed = 0.0f;
-        gPlanetInfoData[7].mRotationSpeed = 0.8f;
-        gPlanetInfoData[7].mTranslationMat = mat4::translation(vec3(70.0f, 0, 0));
-        gPlanetInfoData[7].mScaleMat = mat4::scale(vec3(7));
-        gPlanetInfoData[7].mColor = vec4(0.13f, 0.13f, 0.32f, 1.0f);
-        gPlanetInfoData[7].mMorphingSpeed = 1;
-
-        // Neptune
-        gPlanetInfoData[8].mParentIndex = 0;
-        gPlanetInfoData[8].mYOrbitSpeed = 164.81f;
-        gPlanetInfoData[8].mZOrbitSpeed = 0.0f;
-        gPlanetInfoData[8].mRotationSpeed = 0.9f;
-        gPlanetInfoData[8].mTranslationMat = mat4::translation(vec3(80.0f, 0, 0));
-        gPlanetInfoData[8].mScaleMat = mat4::scale(vec3(8));
-        gPlanetInfoData[8].mColor = vec4(0.21f, 0.028f, 0.79f, 1.0f);
-        gPlanetInfoData[8].mMorphingSpeed = 1;
-
-        // Pluto - Not a planet XDD
-        gPlanetInfoData[9].mParentIndex = 0;
-        gPlanetInfoData[9].mYOrbitSpeed = 247.7f;
-        gPlanetInfoData[9].mZOrbitSpeed = 1.0f;
-        gPlanetInfoData[9].mRotationSpeed = 7.0f;
-        gPlanetInfoData[9].mTranslationMat = mat4::translation(vec3(90.0f, 0, 0));
-        gPlanetInfoData[9].mScaleMat = mat4::scale(vec3(1.0f));
-        gPlanetInfoData[9].mColor = vec4(0.45f, 0.21f, 0.21f, 1.0f);
-        gPlanetInfoData[9].mMorphingSpeed = 1;
-
-        // Moon
-        gPlanetInfoData[10].mParentIndex = 3;
-        gPlanetInfoData[10].mYOrbitSpeed = 1.0f;
-        gPlanetInfoData[10].mZOrbitSpeed = 200.0f;
-        gPlanetInfoData[10].mRotationSpeed = 27.0f;
-        gPlanetInfoData[10].mTranslationMat = mat4::translation(vec3(5.0f, 0, 0));
-        gPlanetInfoData[10].mScaleMat = mat4::scale(vec3(1));
-        gPlanetInfoData[10].mColor = vec4(0.07f, 0.07f, 0.13f, 1.0f);
-        gPlanetInfoData[10].mMorphingSpeed = 1;
+        
 
         CameraMotionParameters cmp{ 160.0f, 600.0f, 200.0f };
         vec3                   camPos{ 48.0f, 48.0f, 20.0f };
@@ -864,39 +754,9 @@ public:
         gUniformData.mLightColor = vec4(0.9f, 0.9f, 0.7f, 1.0f); // Pale Yellow
 
         // update planet transformations
-        for (unsigned int i = 0; i < gNumPlanets; i++)
-        {
-            mat4 rotSelf, rotOrbitY, rotOrbitZ, trans, scale, parentMat;
-            rotSelf = rotOrbitY = rotOrbitZ = parentMat = mat4::identity();
-            if (gPlanetInfoData[i].mRotationSpeed > 0.0f)
-                rotSelf = mat4::rotationY(gRotSelfScale * (currentTime + gTimeOffset) / gPlanetInfoData[i].mRotationSpeed);
-            if (gPlanetInfoData[i].mYOrbitSpeed > 0.0f)
-                rotOrbitY = mat4::rotationY(gRotOrbitYScale * (currentTime + gTimeOffset) / gPlanetInfoData[i].mYOrbitSpeed);
-            if (gPlanetInfoData[i].mZOrbitSpeed > 0.0f)
-                rotOrbitZ = mat4::rotationZ(gRotOrbitZScale * (currentTime + gTimeOffset) / gPlanetInfoData[i].mZOrbitSpeed);
-            if (gPlanetInfoData[i].mParentIndex > 0)
-                parentMat = gPlanetInfoData[gPlanetInfoData[i].mParentIndex].mSharedMat;
-
-            trans = gPlanetInfoData[i].mTranslationMat;
-            scale = gPlanetInfoData[i].mScaleMat;
-
-            scale[0][0] /= 2;
-            scale[1][1] /= 2;
-            scale[2][2] /= 2;
-
-            gPlanetInfoData[i].mSharedMat = parentMat * rotOrbitY * trans;
-            gUniformData.mToWorldMat[i] = parentMat * rotOrbitY * rotOrbitZ * trans * rotSelf * scale;
-            gUniformData.mColor[i] = gPlanetInfoData[i].mColor;
-
-            float step;
-            float phase = modf(currentTime * gPlanetInfoData[i].mMorphingSpeed / 2000.f, &step);
-            if (phase > 0.5f)
-                phase = 2 - phase * 2;
-            else
-                phase = phase * 2;
-
-            gUniformData.mGeometryWeight[i][0] = phase;
-        }
+        // Update planet transform (now just a static transform)
+        gUniformData.mToWorldMat[0] = mat4::identity(); // or whatever fixed position we want
+        gUniformData.mColor[0] = gPlanetInfoData[0].mColor;
 
         viewMat.setTranslation(vec3(0));
         gUniformDataSky = {};

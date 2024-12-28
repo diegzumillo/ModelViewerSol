@@ -1,42 +1,42 @@
 date       time     [thread name/id ]                   file:line    v |
-2024-12-22 16:43:42 [MainThread     ]                   Log.c:193   INFO| Opened log file Model Viewer.log
-2024-12-22 16:43:42 [MainThread     ]         WindowsBase.cpp:373   INFO| Operating System: Windows PC. Version: 10.0 (Build: 22631). Device Name: Unknown.
-2024-12-22 16:43:42 [MainThread     ]       WindowsWindow.cpp:1130   DBG| Monitor index [0] DPI scale = (1.00, 1.00)
-2024-12-22 16:43:42 [MainThread     ]       WindowsWindow.cpp:713   INFO| Created window app Model Viewer
-2024-12-22 16:43:42 [MainThread     ]       WindowsWindow.cpp:1130   DBG| Monitor index [0] DPI scale = (1.00, 1.00)
-2024-12-22 16:43:42 [MainThread     ]       WindowsWindow.cpp:1130   DBG| Monitor index [0] DPI scale = (1.00, 1.00)
-2024-12-22 16:43:42 [MainThread     ]       WindowsWindow.cpp:1130   DBG| Monitor index [0] DPI scale = (1.00, 1.00)
-2024-12-22 16:43:43 [MainThread     ]      GraphicsConfig.cpp:557   INFO| Default GPU Data:
-2024-12-22 16:43:43 [MainThread     ]      GraphicsConfig.cpp:558   INFO|     DefaultGPUPresetLevel set to low
-2024-12-22 16:43:43 [MainThread     ]      GraphicsConfig.cpp:560   INFO| GPU vendors:
-2024-12-22 16:43:43 [MainThread     ]      GraphicsConfig.cpp:578   INFO|     intel: 0x8086
-2024-12-22 16:43:43 [MainThread     ]      GraphicsConfig.cpp:578   INFO|     amd: 0x1002
-2024-12-22 16:43:43 [MainThread     ]      GraphicsConfig.cpp:578   INFO|     nvidia: 0x10de
-2024-12-22 16:43:43 [MainThread     ]      GraphicsConfig.cpp:578   INFO|     qualcomm: 0x5143
-2024-12-22 16:43:43 [MainThread     ]   WindowsFileSystem.cpp:243    ERR| Error opening file: gpu.cfg -- rb (error: No such file or directory)
-2024-12-22 16:43:43 [MainThread     ]      GraphicsConfig.cpp:595   WARN| gpu.cfg could not be found, first gpu found set as active gpu.
-2024-12-22 16:43:43 [MainThread     ]          Direct3D12.cpp:1364  INFO| Loading d3d12.dll
-2024-12-22 16:43:43 [MainThread     ]          Direct3D12.cpp:1376  INFO| Loading dxgi.dll
-2024-12-22 16:43:43 [MainThread     ]           NvApiHelper.h:50    INFO| NVIDIA Display Driver Version 56636
-2024-12-22 16:43:43 [MainThread     ]           NvApiHelper.h:51    INFO| NVIDIA Build Branch r566_31
-2024-12-22 16:43:43 [MainThread     ]      GraphicsConfig.cpp:1515  INFO| Setting preset level high for gpu vendor:nvidia model:NVIDIA GeForce RTX 3060
-2024-12-22 16:43:43 [MainThread     ]          Direct3D12.cpp:2729  INFO| GPU[0] detected. Vendor ID: 0x10de, Model ID: 0x2487, Revision ID: 0xa1, Preset: high, GPU Name: NVIDIA GeForce RTX 3060
-2024-12-22 16:43:43 [MainThread     ]          Direct3D12.cpp:2414  INFO| GPU[0] is selected as default GPU
-2024-12-22 16:43:43 [MainThread     ]          Direct3D12.cpp:2415  INFO| Name of selected gpu: NVIDIA GeForce RTX 3060
-2024-12-22 16:43:43 [MainThread     ]          Direct3D12.cpp:2416  INFO| Vendor id of selected gpu: 0x10de
-2024-12-22 16:43:43 [MainThread     ]          Direct3D12.cpp:2417  INFO| Model id of selected gpu: 0x2487
-2024-12-22 16:43:43 [MainThread     ]          Direct3D12.cpp:2418  INFO| Revision id of selected gpu: 0xa1
-2024-12-22 16:43:43 [MainThread     ]          Direct3D12.cpp:2419  INFO| Preset of selected gpu: high
-2024-12-22 16:43:43 [MainThread     ]       WindowsWindow.cpp:1130   DBG| Monitor index [0] DPI scale = (1.00, 1.00)
-2024-12-22 16:43:43 [MainThread     ]       WindowsWindow.cpp:1130   DBG| Monitor index [0] DPI scale = (1.00, 1.00)
-2024-12-22 16:43:43 [MainThread     ]       WindowsWindow.cpp:1130   DBG| Monitor index [0] DPI scale = (1.00, 1.00)
-2024-12-22 16:43:43 [MainThread     ]          Direct3D12.cpp:3283  INFO| Adding D3D12 swapchain @ 1360x768
-2024-12-22 16:43:44 [MainThread     ]          Direct3D12.cpp:4616  INFO| Descriptor (uSampler) : User specified Static Sampler
-2024-12-22 16:43:44 [MainThread     ]          Direct3D12.cpp:4616  INFO| Descriptor (uSampler0) : User specified Static Sampler
-2024-12-22 16:43:44 [MainThread     ]          Direct3D12.cpp:4652  INFO| Descriptor (uniformBlock_rootcbv) : User specified D3D12_ROOT_PARAMETER_TYPE_CBV
-2024-12-22 16:43:44 [MainThread     ]          Direct3D12.cpp:4799  INFO| Root constant (uRootConstants) has (6) 32 bit values. It is recommended to have root constant number <= 4
-2024-12-22 16:43:44 [MainThread     ]         WindowsBase.cpp:538   INFO| Application Init+Load+Reload 1.053000ms
-2024-12-22 16:43:47 [MainThread     ]          Direct3D12.cpp:2623  WARN| Printing live D3D12 objects to the debugger output window...
-2024-12-22 16:43:47 [MainThread     ]          Direct3D12.cpp:1335  INFO| Unloading d3d12.dll
-2024-12-22 16:43:47 [MainThread     ]          Direct3D12.cpp:1346  INFO| Unloading dxgi.dll
-2024-12-22 16:43:47 [MainThread     ]                   Log.c:153   INFO| Shutting down log system.
+2024-12-28 17:18:12 [MainThread     ]                   Log.c:193   INFO| Opened log file Model Viewer.log
+2024-12-28 17:18:12 [MainThread     ]         WindowsBase.cpp:373   INFO| Operating System: Windows PC. Version: 10.0 (Build: 22631). Device Name: Unknown.
+2024-12-28 17:18:12 [MainThread     ]       WindowsWindow.cpp:1130   DBG| Monitor index [0] DPI scale = (1.00, 1.00)
+2024-12-28 17:18:12 [MainThread     ]       WindowsWindow.cpp:713   INFO| Created window app Model Viewer
+2024-12-28 17:18:12 [MainThread     ]       WindowsWindow.cpp:1130   DBG| Monitor index [0] DPI scale = (1.00, 1.00)
+2024-12-28 17:18:12 [MainThread     ]       WindowsWindow.cpp:1130   DBG| Monitor index [0] DPI scale = (1.00, 1.00)
+2024-12-28 17:18:12 [MainThread     ]       WindowsWindow.cpp:1130   DBG| Monitor index [0] DPI scale = (1.00, 1.00)
+2024-12-28 17:18:12 [MainThread     ]      GraphicsConfig.cpp:557   INFO| Default GPU Data:
+2024-12-28 17:18:12 [MainThread     ]      GraphicsConfig.cpp:558   INFO|     DefaultGPUPresetLevel set to low
+2024-12-28 17:18:12 [MainThread     ]      GraphicsConfig.cpp:560   INFO| GPU vendors:
+2024-12-28 17:18:12 [MainThread     ]      GraphicsConfig.cpp:578   INFO|     intel: 0x8086
+2024-12-28 17:18:12 [MainThread     ]      GraphicsConfig.cpp:578   INFO|     amd: 0x1002
+2024-12-28 17:18:12 [MainThread     ]      GraphicsConfig.cpp:578   INFO|     nvidia: 0x10de
+2024-12-28 17:18:12 [MainThread     ]      GraphicsConfig.cpp:578   INFO|     qualcomm: 0x5143
+2024-12-28 17:18:12 [MainThread     ]   WindowsFileSystem.cpp:243    ERR| Error opening file: gpu.cfg -- rb (error: No such file or directory)
+2024-12-28 17:18:12 [MainThread     ]      GraphicsConfig.cpp:595   WARN| gpu.cfg could not be found, first gpu found set as active gpu.
+2024-12-28 17:18:12 [MainThread     ]          Direct3D12.cpp:1364  INFO| Loading d3d12.dll
+2024-12-28 17:18:12 [MainThread     ]          Direct3D12.cpp:1376  INFO| Loading dxgi.dll
+2024-12-28 17:18:12 [MainThread     ]           NvApiHelper.h:50    INFO| NVIDIA Display Driver Version 56636
+2024-12-28 17:18:12 [MainThread     ]           NvApiHelper.h:51    INFO| NVIDIA Build Branch r566_31
+2024-12-28 17:18:12 [MainThread     ]      GraphicsConfig.cpp:1515  INFO| Setting preset level high for gpu vendor:nvidia model:NVIDIA GeForce RTX 3060
+2024-12-28 17:18:12 [MainThread     ]          Direct3D12.cpp:2729  INFO| GPU[0] detected. Vendor ID: 0x10de, Model ID: 0x2487, Revision ID: 0xa1, Preset: high, GPU Name: NVIDIA GeForce RTX 3060
+2024-12-28 17:18:12 [MainThread     ]          Direct3D12.cpp:2414  INFO| GPU[0] is selected as default GPU
+2024-12-28 17:18:12 [MainThread     ]          Direct3D12.cpp:2415  INFO| Name of selected gpu: NVIDIA GeForce RTX 3060
+2024-12-28 17:18:12 [MainThread     ]          Direct3D12.cpp:2416  INFO| Vendor id of selected gpu: 0x10de
+2024-12-28 17:18:12 [MainThread     ]          Direct3D12.cpp:2417  INFO| Model id of selected gpu: 0x2487
+2024-12-28 17:18:12 [MainThread     ]          Direct3D12.cpp:2418  INFO| Revision id of selected gpu: 0xa1
+2024-12-28 17:18:12 [MainThread     ]          Direct3D12.cpp:2419  INFO| Preset of selected gpu: high
+2024-12-28 17:18:13 [MainThread     ]       WindowsWindow.cpp:1130   DBG| Monitor index [0] DPI scale = (1.00, 1.00)
+2024-12-28 17:18:13 [MainThread     ]       WindowsWindow.cpp:1130   DBG| Monitor index [0] DPI scale = (1.00, 1.00)
+2024-12-28 17:18:13 [MainThread     ]       WindowsWindow.cpp:1130   DBG| Monitor index [0] DPI scale = (1.00, 1.00)
+2024-12-28 17:18:13 [MainThread     ]          Direct3D12.cpp:3283  INFO| Adding D3D12 swapchain @ 1360x768
+2024-12-28 17:18:13 [MainThread     ]          Direct3D12.cpp:4616  INFO| Descriptor (uSampler) : User specified Static Sampler
+2024-12-28 17:18:13 [MainThread     ]          Direct3D12.cpp:4616  INFO| Descriptor (uSampler0) : User specified Static Sampler
+2024-12-28 17:18:13 [MainThread     ]          Direct3D12.cpp:4652  INFO| Descriptor (uniformBlock_rootcbv) : User specified D3D12_ROOT_PARAMETER_TYPE_CBV
+2024-12-28 17:18:13 [MainThread     ]          Direct3D12.cpp:4799  INFO| Root constant (uRootConstants) has (6) 32 bit values. It is recommended to have root constant number <= 4
+2024-12-28 17:18:13 [MainThread     ]         WindowsBase.cpp:538   INFO| Application Init+Load+Reload 0.917000ms
+2024-12-28 17:18:16 [MainThread     ]          Direct3D12.cpp:2623  WARN| Printing live D3D12 objects to the debugger output window...
+2024-12-28 17:18:16 [MainThread     ]          Direct3D12.cpp:1335  INFO| Unloading d3d12.dll
+2024-12-28 17:18:16 [MainThread     ]          Direct3D12.cpp:1346  INFO| Unloading dxgi.dll
+2024-12-28 17:18:16 [MainThread     ]                   Log.c:153   INFO| Shutting down log system.

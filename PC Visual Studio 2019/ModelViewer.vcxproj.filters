@@ -44,10 +44,18 @@
     <Filter Include="Scripts">
       <UniqueIdentifier>{89e16dbd-164d-4398-8eb7-1d45a0b08cc5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="inc">
+      <UniqueIdentifier>{68bc891d-921d-4cb0-907e-2a9cce79f57c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\ModelViewer\ModelViewerMain.cpp">
       <Filter>src</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="triangle.h">
+      <Filter>inc</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

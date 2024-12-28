@@ -1,0 +1,304 @@
+ -------------------------------------------------------------------------------
+                Memory leak report 12/28/2024 12:31:38:                  
+                Simple App.memleaks                  
+ -------------------------------------------------------------------------------
+18 memory leaks found:
+
+Alloc.        Addr           Size           Addr           Size                        BreakOn BreakOn
+Number      Reported       Reported        Actual         Actual     Unused    Method  Dealloc Realloc  Allocated by
+------ ------------------ ---------- ------------------ ---------- ---------- -------- ------- ------- ---------------------------------------------------
+  1527 0x000001B7468636B0 0x00000160 0x000001B7468636A0 0x00000190 0x00000000 calloc      N       N    Direct3D12.cpp(00397)::add_descriptor_heap
+    at tf_calloc_memalign_internal in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\MemoryTracking\MemoryTracking.c: line: 98: address: 0xA9F540C0
+    at tf_calloc_internal in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\MemoryTracking\MemoryTracking.c: line: 84: address: 0xA9F54060
+    at add_descriptor_heap in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 397: address: 0xA9EF3A70
+    at initRenderer in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 2886: address: 0xA9EDF1C0
+    at SimpleApp::Init in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 44: address: 0xA9EC3260
+    at WindowsMain in C:\gamedev\theforge\The-Forge - Copy\Common_3\OS\Windows\WindowsBase.cpp: line: 519: address: 0xA9F52420
+    at main in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 115: address: 0xA9EC2FB0
+    at invoke_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 79: address: 0xAA1E7F30
+    at __scrt_common_main_seh in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 288: address: 0xAA1E7CE0
+    at __scrt_common_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 331: address: 0xAA1E7CC0
+    at mainCRTStartup in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_main.cpp: line: 17: address: 0xAA1E7FF0
+    at BaseThreadInitThunk, address 0x6FF42580 in C:\WINDOWS\System32\KERNEL32.DLL
+    at RtlUserThreadStart, address 0x7102AF10 in C:\WINDOWS\SYSTEM32\ntdll.dll
+  1537 0x000001B742C63F80 0x000000C0 0x000001B742C63F70 0x000000F0 0x00000000 calloc      N       N    Direct3D12.cpp(01041)::add_default_resources
+    at tf_calloc_memalign_internal in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\MemoryTracking\MemoryTracking.c: line: 98: address: 0xA9F540C0
+    at tf_calloc_internal in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\MemoryTracking\MemoryTracking.c: line: 84: address: 0xA9F54060
+    at add_default_resources in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 1041: address: 0xA9EF5650
+    at initRenderer in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 2922: address: 0xA9EDF1C0
+    at SimpleApp::Init in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 44: address: 0xA9EC3260
+    at WindowsMain in C:\gamedev\theforge\The-Forge - Copy\Common_3\OS\Windows\WindowsBase.cpp: line: 519: address: 0xA9F52420
+    at main in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 115: address: 0xA9EC2FB0
+    at invoke_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 79: address: 0xAA1E7F30
+    at __scrt_common_main_seh in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 288: address: 0xAA1E7CE0
+    at __scrt_common_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 331: address: 0xAA1E7CC0
+    at mainCRTStartup in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_main.cpp: line: 17: address: 0xAA1E7FF0
+    at BaseThreadInitThunk, address 0x6FF42580 in C:\WINDOWS\System32\KERNEL32.DLL
+    at RtlUserThreadStart, address 0x7102AF10 in C:\WINDOWS\SYSTEM32\ntdll.dll
+  1528 0x000001B7469D4D60 0x000000A0 0x000001B7469D4D50 0x000000D0 0x00000000 calloc      N       N    Direct3D12.cpp(00397)::add_descriptor_heap
+    at tf_calloc_memalign_internal in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\MemoryTracking\MemoryTracking.c: line: 98: address: 0xA9F540C0
+    at tf_calloc_internal in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\MemoryTracking\MemoryTracking.c: line: 84: address: 0xA9F54060
+    at add_descriptor_heap in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 397: address: 0xA9EF3A70
+    at initRenderer in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 2886: address: 0xA9EDF1C0
+    at SimpleApp::Init in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 44: address: 0xA9EC3260
+    at WindowsMain in C:\gamedev\theforge\The-Forge - Copy\Common_3\OS\Windows\WindowsBase.cpp: line: 519: address: 0xA9F52420
+    at main in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 115: address: 0xA9EC2FB0
+    at invoke_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 79: address: 0xAA1E7F30
+    at __scrt_common_main_seh in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 288: address: 0xAA1E7CE0
+    at __scrt_common_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 331: address: 0xAA1E7CC0
+    at mainCRTStartup in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_main.cpp: line: 17: address: 0xAA1E7FF0
+    at BaseThreadInitThunk, address 0x6FF42580 in C:\WINDOWS\System32\KERNEL32.DLL
+    at RtlUserThreadStart, address 0x7102AF10 in C:\WINDOWS\SYSTEM32\ntdll.dll
+  1533 0x000001B746F15960 0x00000378 0x000001B746F15950 0x000003A0 0x00000018 malloc      N       N    Direct3D12.cpp(02913)::initRenderer::<lambda_01876ab99ce4b3277681d29731d1689a>::operator ()
+    at tf_memalign_internal in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\MemoryTracking\MemoryTracking.c: line: 88: address: 0xA9F53FF0
+    at <lambda_01876ab99ce4b3277681d29731d1689a>::operator() in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 2913: address: 0xA9EFA9D0
+    at <lambda_01876ab99ce4b3277681d29731d1689a>::<lambda_invoker_cdecl> in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 2913: address: 0xA9EFAA30
+    at D3D12MA::Malloc in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\ThirdParty\OpenSource\D3D12MemoryAllocator\Direct3D12MemoryAllocator.h: line: 1694: address: 0xA9EC6050
+    at D3D12MA::Allocate<D3D12MA::AllocatorPimpl> in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\ThirdParty\OpenSource\D3D12MemoryAllocator\Direct3D12MemoryAllocator.h: line: 1707: address: 0xA9EDE9F0
+    at D3D12MA::Allocator::Allocator in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\ThirdParty\OpenSource\D3D12MemoryAllocator\Direct3D12MemoryAllocator.h: line: 10389: address: 0xA9EC5430
+    at D3D12MA::CreateAllocator in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\ThirdParty\OpenSource\D3D12MemoryAllocator\Direct3D12MemoryAllocator.h: line: 9816: address: 0xA9EC52C0
+    at initRenderer in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 2916: address: 0xA9EDF1C0
+    at SimpleApp::Init in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 44: address: 0xA9EC3260
+    at WindowsMain in C:\gamedev\theforge\The-Forge - Copy\Common_3\OS\Windows\WindowsBase.cpp: line: 519: address: 0xA9F52420
+    at main in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 115: address: 0xA9EC2FB0
+    at invoke_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 79: address: 0xAA1E7F30
+    at __scrt_common_main_seh in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 288: address: 0xAA1E7CE0
+    at __scrt_common_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 331: address: 0xAA1E7CC0
+    at mainCRTStartup in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_main.cpp: line: 17: address: 0xAA1E7FF0
+    at BaseThreadInitThunk, address 0x6FF42580 in C:\WINDOWS\System32\KERNEL32.DLL
+    at RtlUserThreadStart, address 0x7102AF10 in C:\WINDOWS\SYSTEM32\ntdll.dll
+  1529 0x000001B7469D5D50 0x000000A0 0x000001B7469D5D40 0x000000D0 0x00000000 calloc      N       N    Direct3D12.cpp(00397)::add_descriptor_heap
+    at tf_calloc_memalign_internal in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\MemoryTracking\MemoryTracking.c: line: 98: address: 0xA9F540C0
+    at tf_calloc_internal in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\MemoryTracking\MemoryTracking.c: line: 84: address: 0xA9F54060
+    at add_descriptor_heap in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 397: address: 0xA9EF3A70
+    at initRenderer in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 2886: address: 0xA9EDF1C0
+    at SimpleApp::Init in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 44: address: 0xA9EC3260
+    at WindowsMain in C:\gamedev\theforge\The-Forge - Copy\Common_3\OS\Windows\WindowsBase.cpp: line: 519: address: 0xA9F52420
+    at main in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 115: address: 0xA9EC2FB0
+    at invoke_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 79: address: 0xAA1E7F30
+    at __scrt_common_main_seh in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 288: address: 0xAA1E7CE0
+    at __scrt_common_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 331: address: 0xAA1E7CC0
+    at mainCRTStartup in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_main.cpp: line: 17: address: 0xAA1E7FF0
+    at BaseThreadInitThunk, address 0x6FF42580 in C:\WINDOWS\System32\KERNEL32.DLL
+    at RtlUserThreadStart, address 0x7102AF10 in C:\WINDOWS\SYSTEM32\ntdll.dll
+  1535 0x000001B7467F5F50 0x00000078 0x000001B7467F5F40 0x000000A0 0x00000008 malloc      N       N    Direct3D12.cpp(02913)::initRenderer::<lambda_01876ab99ce4b3277681d29731d1689a>::operator ()
+    at tf_memalign_internal in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\MemoryTracking\MemoryTracking.c: line: 88: address: 0xA9F53FF0
+    at <lambda_01876ab99ce4b3277681d29731d1689a>::operator() in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 2913: address: 0xA9EFA9D0
+    at <lambda_01876ab99ce4b3277681d29731d1689a>::<lambda_invoker_cdecl> in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 2913: address: 0xA9EFAA30
+    at D3D12MA::Malloc in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\ThirdParty\OpenSource\D3D12MemoryAllocator\Direct3D12MemoryAllocator.h: line: 1694: address: 0xA9EC6050
+    at D3D12MA::Allocate<D3D12MA::BlockVector> in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\ThirdParty\OpenSource\D3D12MemoryAllocator\Direct3D12MemoryAllocator.h: line: 1707: address: 0xA9EDDB40
+    at D3D12MA::AllocatorPimpl::Init in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\ThirdParty\OpenSource\D3D12MemoryAllocator\Direct3D12MemoryAllocator.h: line: 6800: address: 0xA9ED8BB0
+    at D3D12MA::CreateAllocator in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\ThirdParty\OpenSource\D3D12MemoryAllocator\Direct3D12MemoryAllocator.h: line: 9817: address: 0xA9EC52C0
+    at initRenderer in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 2916: address: 0xA9EDF1C0
+    at SimpleApp::Init in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 44: address: 0xA9EC3260
+    at WindowsMain in C:\gamedev\theforge\The-Forge - Copy\Common_3\OS\Windows\WindowsBase.cpp: line: 519: address: 0xA9F52420
+    at main in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 115: address: 0xA9EC2FB0
+    at invoke_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 79: address: 0xAA1E7F30
+    at __scrt_common_main_seh in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 288: address: 0xAA1E7CE0
+    at __scrt_common_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 331: address: 0xAA1E7CC0
+    at mainCRTStartup in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_main.cpp: line: 17: address: 0xAA1E7FF0
+    at BaseThreadInitThunk, address 0x6FF42580 in C:\WINDOWS\System32\KERNEL32.DLL
+    at RtlUserThreadStart, address 0x7102AF10 in C:\WINDOWS\SYSTEM32\ntdll.dll
+  1523 0x000001B746E16550 0x00000020 0x000001B746E16540 0x00000050 0x00000000 malloc      N       N    Direct3D12.cpp(02874)::initRenderer
+    at tf_memalign_internal in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\MemoryTracking\MemoryTracking.c: line: 88: address: 0xA9F53FF0
+    at tf_malloc_internal in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\MemoryTracking\MemoryTracking.c: line: 79: address: 0xA9F53F90
+    at initRenderer in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 2874: address: 0xA9EDF1C0
+    at SimpleApp::Init in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 44: address: 0xA9EC3260
+    at WindowsMain in C:\gamedev\theforge\The-Forge - Copy\Common_3\OS\Windows\WindowsBase.cpp: line: 519: address: 0xA9F52420
+    at main in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 115: address: 0xA9EC2FB0
+    at invoke_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 79: address: 0xAA1E7F30
+    at __scrt_common_main_seh in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 288: address: 0xAA1E7CE0
+    at __scrt_common_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 331: address: 0xAA1E7CC0
+    at mainCRTStartup in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_main.cpp: line: 17: address: 0xAA1E7FF0
+    at BaseThreadInitThunk, address 0x6FF42580 in C:\WINDOWS\System32\KERNEL32.DLL
+    at RtlUserThreadStart, address 0x7102AF10 in C:\WINDOWS\SYSTEM32\ntdll.dll
+  1534 0x000001B7467F6C70 0x00000078 0x000001B7467F6C60 0x000000A0 0x00000008 malloc      N       N    Direct3D12.cpp(02913)::initRenderer::<lambda_01876ab99ce4b3277681d29731d1689a>::operator ()
+    at tf_memalign_internal in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\MemoryTracking\MemoryTracking.c: line: 88: address: 0xA9F53FF0
+    at <lambda_01876ab99ce4b3277681d29731d1689a>::operator() in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 2913: address: 0xA9EFA9D0
+    at <lambda_01876ab99ce4b3277681d29731d1689a>::<lambda_invoker_cdecl> in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 2913: address: 0xA9EFAA30
+    at D3D12MA::Malloc in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\ThirdParty\OpenSource\D3D12MemoryAllocator\Direct3D12MemoryAllocator.h: line: 1694: address: 0xA9EC6050
+    at D3D12MA::Allocate<D3D12MA::BlockVector> in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\ThirdParty\OpenSource\D3D12MemoryAllocator\Direct3D12MemoryAllocator.h: line: 1707: address: 0xA9EDDB40
+    at D3D12MA::AllocatorPimpl::Init in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\ThirdParty\OpenSource\D3D12MemoryAllocator\Direct3D12MemoryAllocator.h: line: 6800: address: 0xA9ED8BB0
+    at D3D12MA::CreateAllocator in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\ThirdParty\OpenSource\D3D12MemoryAllocator\Direct3D12MemoryAllocator.h: line: 9817: address: 0xA9EC52C0
+    at initRenderer in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 2916: address: 0xA9EDF1C0
+    at SimpleApp::Init in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 44: address: 0xA9EC3260
+    at WindowsMain in C:\gamedev\theforge\The-Forge - Copy\Common_3\OS\Windows\WindowsBase.cpp: line: 519: address: 0xA9F52420
+    at main in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 115: address: 0xA9EC2FB0
+    at invoke_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 79: address: 0xAA1E7F30
+    at __scrt_common_main_seh in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 288: address: 0xAA1E7CE0
+    at __scrt_common_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 331: address: 0xAA1E7CC0
+    at mainCRTStartup in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_main.cpp: line: 17: address: 0xAA1E7FF0
+    at BaseThreadInitThunk, address 0x6FF42580 in C:\WINDOWS\System32\KERNEL32.DLL
+    at RtlUserThreadStart, address 0x7102AF10 in C:\WINDOWS\SYSTEM32\ntdll.dll
+  1536 0x000001B7467F76F0 0x00000078 0x000001B7467F76E0 0x000000A0 0x00000008 malloc      N       N    Direct3D12.cpp(02913)::initRenderer::<lambda_01876ab99ce4b3277681d29731d1689a>::operator ()
+    at tf_memalign_internal in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\MemoryTracking\MemoryTracking.c: line: 88: address: 0xA9F53FF0
+    at <lambda_01876ab99ce4b3277681d29731d1689a>::operator() in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 2913: address: 0xA9EFA9D0
+    at <lambda_01876ab99ce4b3277681d29731d1689a>::<lambda_invoker_cdecl> in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 2913: address: 0xA9EFAA30
+    at D3D12MA::Malloc in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\ThirdParty\OpenSource\D3D12MemoryAllocator\Direct3D12MemoryAllocator.h: line: 1694: address: 0xA9EC6050
+    at D3D12MA::Allocate<D3D12MA::BlockVector> in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\ThirdParty\OpenSource\D3D12MemoryAllocator\Direct3D12MemoryAllocator.h: line: 1707: address: 0xA9EDDB40
+    at D3D12MA::AllocatorPimpl::Init in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\ThirdParty\OpenSource\D3D12MemoryAllocator\Direct3D12MemoryAllocator.h: line: 6800: address: 0xA9ED8BB0
+    at D3D12MA::CreateAllocator in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\ThirdParty\OpenSource\D3D12MemoryAllocator\Direct3D12MemoryAllocator.h: line: 9817: address: 0xA9EC52C0
+    at initRenderer in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 2916: address: 0xA9EDF1C0
+    at SimpleApp::Init in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 44: address: 0xA9EC3260
+    at WindowsMain in C:\gamedev\theforge\The-Forge - Copy\Common_3\OS\Windows\WindowsBase.cpp: line: 519: address: 0xA9F52420
+    at main in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 115: address: 0xA9EC2FB0
+    at invoke_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 79: address: 0xAA1E7F30
+    at __scrt_common_main_seh in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 288: address: 0xAA1E7CE0
+    at __scrt_common_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 331: address: 0xAA1E7CC0
+    at mainCRTStartup in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_main.cpp: line: 17: address: 0xAA1E7FF0
+    at BaseThreadInitThunk, address 0x6FF42580 in C:\WINDOWS\System32\KERNEL32.DLL
+    at RtlUserThreadStart, address 0x7102AF10 in C:\WINDOWS\SYSTEM32\ntdll.dll
+  1521 0x000001B742BE8180 0x00000080 0x000001B742BE8140 0x000000E0 0x00000000 calloc      N       N    Direct3D12.cpp(02761)::initRenderer
+    at tf_calloc_memalign_internal in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\MemoryTracking\MemoryTracking.c: line: 98: address: 0xA9F540C0
+    at initRenderer in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 2761: address: 0xA9EDF1C0
+    at SimpleApp::Init in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 44: address: 0xA9EC3260
+    at WindowsMain in C:\gamedev\theforge\The-Forge - Copy\Common_3\OS\Windows\WindowsBase.cpp: line: 519: address: 0xA9F52420
+    at main in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 115: address: 0xA9EC2FB0
+    at invoke_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 79: address: 0xAA1E7F30
+    at __scrt_common_main_seh in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 288: address: 0xAA1E7CE0
+    at __scrt_common_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 331: address: 0xAA1E7CC0
+    at mainCRTStartup in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_main.cpp: line: 17: address: 0xAA1E7FF0
+    at BaseThreadInitThunk, address 0x6FF42580 in C:\WINDOWS\System32\KERNEL32.DLL
+    at RtlUserThreadStart, address 0x7102AF10 in C:\WINDOWS\SYSTEM32\ntdll.dll
+  1531 0x000001B746EC9410 0x00000160 0x000001B746EC9400 0x00000190 0x00000000 calloc      N       N    Direct3D12.cpp(00397)::add_descriptor_heap
+    at tf_calloc_memalign_internal in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\MemoryTracking\MemoryTracking.c: line: 98: address: 0xA9F540C0
+    at tf_calloc_internal in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\MemoryTracking\MemoryTracking.c: line: 84: address: 0xA9F54060
+    at add_descriptor_heap in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 397: address: 0xA9EF3A70
+    at initRenderer in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 2903: address: 0xA9EDF1C0
+    at SimpleApp::Init in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 44: address: 0xA9EC3260
+    at WindowsMain in C:\gamedev\theforge\The-Forge - Copy\Common_3\OS\Windows\WindowsBase.cpp: line: 519: address: 0xA9F52420
+    at main in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 115: address: 0xA9EC2FB0
+    at invoke_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 79: address: 0xAA1E7F30
+    at __scrt_common_main_seh in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 288: address: 0xAA1E7CE0
+    at __scrt_common_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 331: address: 0xAA1E7CC0
+    at mainCRTStartup in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_main.cpp: line: 17: address: 0xAA1E7FF0
+    at BaseThreadInitThunk, address 0x6FF42580 in C:\WINDOWS\System32\KERNEL32.DLL
+    at RtlUserThreadStart, address 0x7102AF10 in C:\WINDOWS\SYSTEM32\ntdll.dll
+  1520 0x000001B7465C99A0 0x00043030 0x000001B7465C9990 0x00043058 0x00016B50 realloc     N       N    GraphicsConfig.cpp(00906)::parseGPUModelLine(propagated from arrput)
+    at tf_realloc_internal in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\MemoryTracking\MemoryTracking.c: line: 106: address: 0xA9F54150
+    at stbds_arrgrowf in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\ThirdParty\OpenSource\Nothings\stb_ds.h: line: 954: address: 0xA9F59CA0
+    at stbds_arrgrowf_wrapper<GPUModelDefinition> in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\ThirdParty\OpenSource\Nothings\stb_ds.h: line: 842: address: 0xA9F231F0
+    at parseGPUModelLine in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\GraphicsConfig.cpp: line: 906: address: 0xA9F21420
+    at parseGPUDataFile in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\GraphicsConfig.cpp: line: 537: address: 0xA9F1FA60
+    at addGPUConfigurationRules in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\GraphicsConfig.cpp: line: 435: address: 0xA9F1A0C0
+    at initGPUConfiguration in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\GraphicsConfig.cpp: line: 1764: address: 0xA9F1B200
+    at SimpleApp::Init in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 42: address: 0xA9EC3260
+    at WindowsMain in C:\gamedev\theforge\The-Forge - Copy\Common_3\OS\Windows\WindowsBase.cpp: line: 519: address: 0xA9F52420
+    at main in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 115: address: 0xA9EC2FB0
+    at invoke_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 79: address: 0xAA1E7F30
+    at __scrt_common_main_seh in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 288: address: 0xAA1E7CE0
+    at __scrt_common_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 331: address: 0xAA1E7CC0
+    at mainCRTStartup in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_main.cpp: line: 17: address: 0xAA1E7FF0
+    at BaseThreadInitThunk, address 0x6FF42580 in C:\WINDOWS\System32\KERNEL32.DLL
+    at RtlUserThreadStart, address 0x7102AF10 in C:\WINDOWS\SYSTEM32\ntdll.dll
+  1530 0x000001B746EAA7A0 0x0001E8B0 0x000001B746EAA790 0x0001E8E0 0x00000000 calloc      N       N    Direct3D12.cpp(00397)::add_descriptor_heap
+    at tf_calloc_memalign_internal in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\MemoryTracking\MemoryTracking.c: line: 98: address: 0xA9F540C0
+    at tf_calloc_internal in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\MemoryTracking\MemoryTracking.c: line: 84: address: 0xA9F54060
+    at add_descriptor_heap in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 397: address: 0xA9EF3A70
+    at initRenderer in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 2900: address: 0xA9EDF1C0
+    at SimpleApp::Init in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 44: address: 0xA9EC3260
+    at WindowsMain in C:\gamedev\theforge\The-Forge - Copy\Common_3\OS\Windows\WindowsBase.cpp: line: 519: address: 0xA9F52420
+    at main in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 115: address: 0xA9EC2FB0
+    at invoke_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 79: address: 0xAA1E7F30
+    at __scrt_common_main_seh in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 288: address: 0xAA1E7CE0
+    at __scrt_common_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 331: address: 0xAA1E7CC0
+    at mainCRTStartup in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_main.cpp: line: 17: address: 0xAA1E7FF0
+    at BaseThreadInitThunk, address 0x6FF42580 in C:\WINDOWS\System32\KERNEL32.DLL
+    at RtlUserThreadStart, address 0x7102AF10 in C:\WINDOWS\SYSTEM32\ntdll.dll
+  1532 0x000001B7468AD1D0 0x00000018 0x000001B7468AD1C0 0x00000040 0x00000004 malloc      N       N    Direct3D12.cpp(02913)::initRenderer::<lambda_01876ab99ce4b3277681d29731d1689a>::operator ()
+    at tf_memalign_internal in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\MemoryTracking\MemoryTracking.c: line: 88: address: 0xA9F53FF0
+    at <lambda_01876ab99ce4b3277681d29731d1689a>::operator() in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 2913: address: 0xA9EFA9D0
+    at <lambda_01876ab99ce4b3277681d29731d1689a>::<lambda_invoker_cdecl> in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 2913: address: 0xA9EFAA30
+    at D3D12MA::Malloc in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\ThirdParty\OpenSource\D3D12MemoryAllocator\Direct3D12MemoryAllocator.h: line: 1694: address: 0xA9EC6050
+    at D3D12MA::Allocate<D3D12MA::Allocator> in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\ThirdParty\OpenSource\D3D12MemoryAllocator\Direct3D12MemoryAllocator.h: line: 1707: address: 0xA9EDE780
+    at D3D12MA::CreateAllocator in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\ThirdParty\OpenSource\D3D12MemoryAllocator\Direct3D12MemoryAllocator.h: line: 9816: address: 0xA9EC52C0
+    at initRenderer in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 2916: address: 0xA9EDF1C0
+    at SimpleApp::Init in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 44: address: 0xA9EC3260
+    at WindowsMain in C:\gamedev\theforge\The-Forge - Copy\Common_3\OS\Windows\WindowsBase.cpp: line: 519: address: 0xA9F52420
+    at main in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 115: address: 0xA9EC2FB0
+    at invoke_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 79: address: 0xAA1E7F30
+    at __scrt_common_main_seh in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 288: address: 0xAA1E7CE0
+    at __scrt_common_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 331: address: 0xAA1E7CC0
+    at mainCRTStartup in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_main.cpp: line: 17: address: 0xAA1E7FF0
+    at BaseThreadInitThunk, address 0x6FF42580 in C:\WINDOWS\System32\KERNEL32.DLL
+    at RtlUserThreadStart, address 0x7102AF10 in C:\WINDOWS\SYSTEM32\ntdll.dll
+  1524 0x000001B7468AD3D0 0x00000008 0x000001B7468AD3C0 0x00000038 0x00000000 malloc      N       N    Direct3D12.cpp(02875)::initRenderer
+    at tf_memalign_internal in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\MemoryTracking\MemoryTracking.c: line: 88: address: 0xA9F53FF0
+    at tf_malloc_internal in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\MemoryTracking\MemoryTracking.c: line: 79: address: 0xA9F53F90
+    at initRenderer in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 2875: address: 0xA9EDF1C0
+    at SimpleApp::Init in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 44: address: 0xA9EC3260
+    at WindowsMain in C:\gamedev\theforge\The-Forge - Copy\Common_3\OS\Windows\WindowsBase.cpp: line: 519: address: 0xA9F52420
+    at main in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 115: address: 0xA9EC2FB0
+    at invoke_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 79: address: 0xAA1E7F30
+    at __scrt_common_main_seh in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 288: address: 0xAA1E7CE0
+    at __scrt_common_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 331: address: 0xAA1E7CC0
+    at mainCRTStartup in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_main.cpp: line: 17: address: 0xAA1E7FF0
+    at BaseThreadInitThunk, address 0x6FF42580 in C:\WINDOWS\System32\KERNEL32.DLL
+    at RtlUserThreadStart, address 0x7102AF10 in C:\WINDOWS\SYSTEM32\ntdll.dll
+  1522 0x000001B74660DA80 0x000020F8 0x000001B74660DA70 0x00002120 0x00000000 calloc      N       N    Direct3D12.cpp(02652)::initRendererContext
+    at tf_calloc_memalign_internal in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\MemoryTracking\MemoryTracking.c: line: 98: address: 0xA9F540C0
+    at initRendererContext in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 2652: address: 0xA9EDEA70
+    at initRenderer in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 2778: address: 0xA9EDF1C0
+    at SimpleApp::Init in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 44: address: 0xA9EC3260
+    at WindowsMain in C:\gamedev\theforge\The-Forge - Copy\Common_3\OS\Windows\WindowsBase.cpp: line: 519: address: 0xA9F52420
+    at main in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 115: address: 0xA9EC2FB0
+    at invoke_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 79: address: 0xAA1E7F30
+    at __scrt_common_main_seh in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 288: address: 0xAA1E7CE0
+    at __scrt_common_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 331: address: 0xAA1E7CC0
+    at mainCRTStartup in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_main.cpp: line: 17: address: 0xAA1E7FF0
+    at BaseThreadInitThunk, address 0x6FF42580 in C:\WINDOWS\System32\KERNEL32.DLL
+    at RtlUserThreadStart, address 0x7102AF10 in C:\WINDOWS\SYSTEM32\ntdll.dll
+  1525 0x000001B7468ADE50 0x00000008 0x000001B7468ADE40 0x00000038 0x00000000 malloc      N       N    Direct3D12.cpp(02876)::initRenderer
+    at tf_memalign_internal in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\MemoryTracking\MemoryTracking.c: line: 88: address: 0xA9F53FF0
+    at tf_malloc_internal in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\MemoryTracking\MemoryTracking.c: line: 79: address: 0xA9F53F90
+    at initRenderer in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 2876: address: 0xA9EDF1C0
+    at SimpleApp::Init in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 44: address: 0xA9EC3260
+    at WindowsMain in C:\gamedev\theforge\The-Forge - Copy\Common_3\OS\Windows\WindowsBase.cpp: line: 519: address: 0xA9F52420
+    at main in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 115: address: 0xA9EC2FB0
+    at invoke_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 79: address: 0xAA1E7F30
+    at __scrt_common_main_seh in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 288: address: 0xAA1E7CE0
+    at __scrt_common_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 331: address: 0xAA1E7CC0
+    at mainCRTStartup in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_main.cpp: line: 17: address: 0xAA1E7FF0
+    at BaseThreadInitThunk, address 0x6FF42580 in C:\WINDOWS\System32\KERNEL32.DLL
+    at RtlUserThreadStart, address 0x7102AF10 in C:\WINDOWS\SYSTEM32\ntdll.dll
+  1526 0x000001B7469DE7C0 0x00008060 0x000001B7469DE7B0 0x00008090 0x00000000 calloc      N       N    Direct3D12.cpp(00397)::add_descriptor_heap
+    at tf_calloc_memalign_internal in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\MemoryTracking\MemoryTracking.c: line: 98: address: 0xA9F540C0
+    at tf_calloc_internal in C:\gamedev\theforge\The-Forge - Copy\Common_3\Utilities\MemoryTracking\MemoryTracking.c: line: 84: address: 0xA9F54060
+    at add_descriptor_heap in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 397: address: 0xA9EF3A70
+    at initRenderer in C:\gamedev\theforge\The-Forge - Copy\Common_3\Graphics\Direct3D12\Direct3D12.cpp: line: 2886: address: 0xA9EDF1C0
+    at SimpleApp::Init in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 44: address: 0xA9EC3260
+    at WindowsMain in C:\gamedev\theforge\The-Forge - Copy\Common_3\OS\Windows\WindowsBase.cpp: line: 519: address: 0xA9F52420
+    at main in C:\gamedev\theforge\The-Forge - Copy\Examples_3\ModelViewerSol\src\ModelViewer\ModelViewerMain.cpp: line: 115: address: 0xA9EC2FB0
+    at invoke_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 79: address: 0xAA1E7F30
+    at __scrt_common_main_seh in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 288: address: 0xAA1E7CE0
+    at __scrt_common_main in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl: line: 331: address: 0xAA1E7CC0
+    at mainCRTStartup in D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_main.cpp: line: 17: address: 0xAA1E7FF0
+    at BaseThreadInitThunk, address 0x6FF42580 in C:\WINDOWS\System32\KERNEL32.DLL
+    at RtlUserThreadStart, address 0x7102AF10 in C:\WINDOWS\SYSTEM32\ntdll.dll
+--------------------------------------------------------------------------------
+
+This file contains a log of all memory operations performed during the last run.
+
+Interrogate this file to track errors or to help track down memory-related
+issues. You can do this by tracing the allocations performed by a specific owner
+or by tracking a specific address through a series of allocations and
+reallocations.
+
+There is a lot of useful information here which, when used creatively, can be
+extremely helpful.
+
+Note that the following guides are used throughout this file:
+
+   [!] - Error
+   [+] - Allocation
+   [~] - Reallocation
+   [-] - Deallocation
+   [I] - Generic information
+   [F] - Failure induced for the purpose of stress-testing your application
+   [D] - Information used for debugging this memory manager
+
+...so, to find all errors in the file, search for "[!]"
+
+--------------------------------------------------------------------------------
+----All Allocations and Deallocations----
+

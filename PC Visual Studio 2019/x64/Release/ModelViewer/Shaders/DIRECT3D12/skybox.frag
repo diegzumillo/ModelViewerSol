@@ -931,18 +931,18 @@ inline int2 GetDimensions(TextureCube t, SamplerState smp) { return GetDimension
 
 #endif // _D3D_H
 
-#line 1 "C:/gamedev/theforge/The-Forge - Copy/Examples_3/Unit_Tests/src/01_Transformations/Shaders/FSL/ShaderList.fsl"
-#line 5 "C:/gamedev/theforge/The-Forge - Copy/Examples_3/Unit_Tests/src/01_Transformations/Shaders/FSL/ShaderList.fsl"
+#line 1 "C:/gamedev/theforge/The-Forge - Copy/Examples_3/ModelViewerSol/src/ModelViewer/Shaders/FSL/ShaderList.fsl"
+#line 5 "C:/gamedev/theforge/The-Forge - Copy/Examples_3/ModelViewerSol/src/ModelViewer/Shaders/FSL/ShaderList.fsl"
 #line 1 "C:/gamedev/theforge/The-Forge - Copy/Common_3/Tools/ForgeShadingLanguage/includes/fsl_ext.h"
 #line 26 "C:/gamedev/theforge/The-Forge - Copy/Common_3/Tools/ForgeShadingLanguage/includes/fsl_ext.h"
 #line 1 "C:/gamedev/theforge/The-Forge - Copy/Common_3/Tools/ForgeShadingLanguage/includes/d3d12_ext.h"
 #line 27 "C:/gamedev/theforge/The-Forge - Copy/Common_3/Tools/ForgeShadingLanguage/includes/fsl_ext.h"
-#line 6 "C:/gamedev/theforge/The-Forge - Copy/Examples_3/Unit_Tests/src/01_Transformations/Shaders/FSL/ShaderList.fsl"
-#line 11 "C:/gamedev/theforge/The-Forge - Copy/Examples_3/Unit_Tests/src/01_Transformations/Shaders/FSL/ShaderList.fsl"
-#line 1 "C:/gamedev/theforge/The-Forge - Copy/Examples_3/Unit_Tests/src/01_Transformations/Shaders/FSL/skybox.frag.fsl"
-#line 27 "C:/gamedev/theforge/The-Forge - Copy/Examples_3/Unit_Tests/src/01_Transformations/Shaders/FSL/skybox.frag.fsl"
-#line 1 "C:/gamedev/theforge/The-Forge - Copy/Examples_3/Unit_Tests/src/01_Transformations/Shaders/FSL/resources.h.fsl"
-#line 29 "C:/gamedev/theforge/The-Forge - Copy/Examples_3/Unit_Tests/src/01_Transformations/Shaders/FSL/resources.h.fsl"
+#line 6 "C:/gamedev/theforge/The-Forge - Copy/Examples_3/ModelViewerSol/src/ModelViewer/Shaders/FSL/ShaderList.fsl"
+#line 11 "C:/gamedev/theforge/The-Forge - Copy/Examples_3/ModelViewerSol/src/ModelViewer/Shaders/FSL/ShaderList.fsl"
+#line 1 "C:/gamedev/theforge/The-Forge - Copy/Examples_3/ModelViewerSol/src/ModelViewer/Shaders/FSL/skybox.frag.fsl"
+#line 27 "C:/gamedev/theforge/The-Forge - Copy/Examples_3/ModelViewerSol/src/ModelViewer/Shaders/FSL/skybox.frag.fsl"
+#line 1 "C:/gamedev/theforge/The-Forge - Copy/Examples_3/ModelViewerSol/src/ModelViewer/Shaders/FSL/resources.h.fsl"
+#line 29 "C:/gamedev/theforge/The-Forge - Copy/Examples_3/ModelViewerSol/src/ModelViewer/Shaders/FSL/resources.h.fsl"
 RES(Tex2D(float4), RightText, UPDATE_FREQ_NONE, t1, binding = 1);
 RES(Tex2D(float4), LeftText, UPDATE_FREQ_NONE, t2, binding = 2);
 RES(Tex2D(float4), TopText, UPDATE_FREQ_NONE, t3, binding = 3);
@@ -976,7 +976,7 @@ STRUCT(UniformData)
 };
 
 RES(CBUFFER(UniformData), uniformBlock, UPDATE_FREQ_PER_FRAME, b0, binding = 0);
-#line 28 "C:/gamedev/theforge/The-Forge - Copy/Examples_3/Unit_Tests/src/01_Transformations/Shaders/FSL/skybox.frag.fsl"
+#line 28 "C:/gamedev/theforge/The-Forge - Copy/Examples_3/ModelViewerSol/src/ModelViewer/Shaders/FSL/skybox.frag.fsl"
 
 STRUCT(VSOutput)
 {
@@ -1031,7 +1031,7 @@ float4 PS_MAIN(VSOutput In): SV_TARGET
     }
     return (Out);
 }
-#line 12 "C:/gamedev/theforge/The-Forge - Copy/Examples_3/Unit_Tests/src/01_Transformations/Shaders/FSL/ShaderList.fsl"
-#line 14 "C:/gamedev/theforge/The-Forge - Copy/Examples_3/Unit_Tests/src/01_Transformations/Shaders/FSL/ShaderList.fsl"
+#line 12 "C:/gamedev/theforge/The-Forge - Copy/Examples_3/ModelViewerSol/src/ModelViewer/Shaders/FSL/ShaderList.fsl"
+#line 14 "C:/gamedev/theforge/The-Forge - Copy/Examples_3/ModelViewerSol/src/ModelViewer/Shaders/FSL/ShaderList.fsl"
 #line 1 "C:/gamedev/theforge/The-Forge - Copy/Common_3/Tools/ForgeShadingLanguage/includes/fsl_ext.h"
-#line 15 "C:/gamedev/theforge/The-Forge - Copy/Examples_3/Unit_Tests/src/01_Transformations/Shaders/FSL/ShaderList.fsl"
+#line 15 "C:/gamedev/theforge/The-Forge - Copy/Examples_3/ModelViewerSol/src/ModelViewer/Shaders/FSL/ShaderList.fsl"

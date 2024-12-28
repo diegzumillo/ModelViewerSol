@@ -27,6 +27,9 @@
     <None Include="..\..\..\Art\Scripts\TestFullScreen.lua" />
     <None Include="..\..\..\Art\Scripts\TestNonCenteredWindow.lua" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="triangle.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{5938554B-1112-4A6D-9CA0-EDEA01CB7F3F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>

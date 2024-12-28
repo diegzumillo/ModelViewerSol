@@ -1,0 +1,82 @@
+#pragma once
+
+#include <Renderer/IRenderer.h>
+#include <OS/Interfaces/ITime.h>
+#include <Middleware_3/UI/AppUI.h>
+#include <glm/glm.hpp>
+
+#include "sample.h"
+
+// image count
+const uint32_t gImageCount = 3;
+
+// forward declare
+struct GLFWwindow;
+
+struct Vertex
+{
+    glm::vec3 pos;
+    glm::vec2 texCoord;
+
+    Vertex(float x, float y, float z, float u, float v): pos(x, y, z), texCoord(u, v) {}
+};
+
+class Triangle: public Sample
+{
+public:
+    Triangle();
+    virtual ~Triangle();
+
+    virtual bool        init(GLFWwindow* pWindow) override;
+    virtual void        onSize(const int32_t width, const int32_t height) override;
+    virtual void        onMouseButton(int32_t button, int32_t action) override;
+    virtual void        onRender() override;
+    virtual const char* getName() override { return "ForgeDemo"; }
+
+private:
+    bool createSwapchainResources();
+
+    Renderer*       mRenderer = NULL;
+    Queue*          mGraphicsQueue = NULL;
+    CmdPool*        mCmdPools[gImageCount] = { NULL };
+    Cmd*            mCmds[gImageCount] = { NULL };
+    SwapChain*      mSwapChain = NULL;
+    RenderTarget*   mDepthBuffer = NULL;
+    LoadActionsDesc mLoadActions = {};
+    Fence*          mRenderCompleteFences[gImageCount] = { NULL };
+    Semaphore*      mImageAcquiredSemaphore = NULL;
+    Semaphore*      mRenderCompleteSemaphores[gImageCount] = { NULL };
+
+    Texture*       mTexture = NULL;
+    Shader*        mShader = NULL;
+    RootSignature* mRootSignature = NULL;
+    DescriptorSet* mDescriptorSet = NULL;
+    Pipeline*      mGraphicsPipeline = NULL;
+    Buffer*        mVertexBuffer = NULL;
+    Buffer*        mIndexBuffer = NULL;
+    Sampler*       mSampler = NULL;
+
+    Timer mTimer;
+
+    int32_t mFbWidth = 0;
+    int32_t mFbHeight = 0;
+
+    uint32_t mIndexCount = 0;
+    uint32_t mFrameIndex = 0;
+
+    GLFWwindow* mWindow = NULL;
+
+    // matrices
+    glm::mat4 mProjMatrix = glm::mat4(1.0f);
+    glm::mat4 mViewMatrix = glm::mat4(1.0f);
+    glm::mat4 mModelMatrix = glm::mat4(1.0f);
+    float     mRotation = 0.0f;
+    float     mRotationSpeed = 0.5f;
+
+    // UI
+    UIApp         mAppUI;
+    GuiComponent* mGuiWindow = NULL;
+    bool          mVSyncEnabled = true;
+    // we need to use the-forge sony math var for this
+    float2        mMousePosition = { 0.0f, 0.0f };
+};
